@@ -8,7 +8,11 @@ theme: /
 
     state: Hello
         intent!: /привет
-        a: Привет привет
+        a: Привет, я чат-бот Наташи
+        go: /WhatsUp
+        
+    state: WhatsUp
+        a: Как дела?  
 
     state: Bye
         intent!: /пока
