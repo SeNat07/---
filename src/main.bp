@@ -1,8 +1,8 @@
 {
   "positions" : [ {
     "id" : "/Start",
-    "x" : 240,
-    "y" : 273
+    "x" : 160,
+    "y" : 267
   }, {
     "id" : "/Hello",
     "x" : 240,
@@ -19,5 +19,33 @@
     "id" : "/Match",
     "x" : 240,
     "y" : 1924
+  }, {
+    "id" : "/Joke",
+    "x" : 569,
+    "y" : 47
+  }, {
+    "id" : "/HowAreYou",
+    "x" : 778,
+    "y" : 259
+  }, {
+    "id" : "/WhatsUp",
+    "x" : 108,
+    "y" : -54
+  }, {
+    "id" : "/Joke/JokeYes",
+    "x" : 1078,
+    "y" : -289
+  }, {
+    "id" : "/Joke/JokeNo",
+    "x" : 934,
+    "y" : 493
+  }, {
+    "id" : "/Joke/ClickButtons",
+    "x" : 143,
+    "y" : 216
+  }, {
+    "id" : "/Joke/JokeYes/JokeText",
+    "x" : 782,
+    "y" : 146
   } ]
 }

@@ -1,6 +1,6 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
-theme: /
+theme: / 
 
     state: Start
         q!: $regex</start>
@@ -29,41 +29,39 @@ theme: /
     state: HowAreYou
         q!: *(как (ты/твои*))*
         a: Все замечательно!
-        go: /Joke
-    
+        go!: /Joke
+
     state: Joke || modal = true
-        a: Хочешь, расскажу шутку?
+        q!: *(как дела/как ты/как твои дела)*
+        a: Хочешь, расскажу шутку? || htmlEnabled = false
         buttons:
-            "Да" -> ./JokeYes
-            "Нет" -> ./JokeNo
+            "Да" -> /Joke/JokeYes
+            "Нет" -> /Joke/JokeNo
+        #q: *шутк*/*анекдот*/*юмор* || onlyThisState = false, toState = "/Joke"
         
-        state: ClickButtons
-            q: *
+        state: ClickButtons || noContext=true
             a: Нажмите, пожалуйста, кнопку.
-            #go!: ..
-            
+            go!: /Joke
+      
         state: JokeNo
-        a: Ну хорошо, расскажу, когда у тебя будет настроение.
+            a: Ну хорошо, расскажу, когда у тебя будет настроение. || htmlEnabled = false, html = "Ну хорошо, расскажу, когда у тебя будет настроение."
+            go!: /HowAreYou
         
         state: JokeYes
-        a: Лови шутку:
-        #go: /JokeText 
-        
-            #state: JokeText
-                #random:
-                   # a: Пора бы перестать строить планы на прошлое.
-                    #a: Утро всегда доброе, а дальше сами.
-                    #a: Взятка унижает человека. Особенно маленькая.
-                    #a: Существует два мнения: одно мое, другое глупое.
-                    #a: Некоторые весьма искренне думают, что они думают.
-                    #a: Скорость моего интернета научила меня терпению.
+            a: Лови шутку: || htmlEnabled = false, html = "Лови шутку:"
+            go!: /Joke/JokeYes/JokeText
+
+            state: JokeText
+                a:  || htmlEnabled = false
+                random:
+                    a: Пора бы перестать строить планы на прошлое.
+                    a: Утро всегда доброе, а дальше сами.
+                    a: Взятка унижает человека. Особенно маленькая.
+                    a: Существует два мнения: одно мое, другое глупое.
+                    a: Некоторые весьма искренне думают, что они думают.
+                    a: Скорость моего интернета научила меня терпению.
+                go!: /Joke
             
-                #state: JokeContinue
-                    #q: *(еще/ещё/давай еще/хочу еще)*
-                    #a: Ну хорошо, расскажу, когда у тебя будет настроение.  
-                    #go!: /JokeText
-        
-        
     state: Bye
         intent!: /пока
         a: Пока, мой милый друг. Возвращайся!
