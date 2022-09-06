@@ -28,20 +28,26 @@ theme: /
 
     state: HowAreYou
         q!: *(как (ты/твои*))*
-        a: Все замечательно! Когда нечем думать, проблем не возникает.
-        a: Хочешь, расскажу шутку?
+        a: Все замечательно!
         go: /Joke
     
-    state: Joke
+    state: Joke || modal = true
+        a: Хочешь, расскажу шутку?
+        buttons:
+            "Да" -> ./JokeYes
+            "Нет" -> ./JokeNo
         
+        state: ClickButtons
+            q: *
+            a: Нажмите, пожалуйста, кнопку.
+            #go!: ..
+            
         state: JokeNo
-        q: *(нет/не*)*
         a: Ну хорошо, расскажу, когда у тебя будет настроение.
         
         state: JokeYes
-        q: *(да/давай/ага)*
         a: Лови шутку:
-        #go!: /JokeYes/JokeText 
+        #go: /JokeText 
         
             #state: JokeText
                 #random:
@@ -63,7 +69,7 @@ theme: /
         a: Пока, мой милый друг. Возвращайся!
 
     state: NoMatch
-        event!: noMatch
+        event!: noMatch || noContext=true
         a: Я не понял. Вы сказали: {{$request.query}}
 
     state: Match
