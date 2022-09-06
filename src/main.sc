@@ -37,23 +37,22 @@ theme: /
         buttons:
             "Да" -> /Joke/JokeYes
             "Нет" -> /Joke/JokeNo
-        #q: *шутк*/*анекдот*/*юмор* || onlyThisState = false, toState = "/Joke"
-        
-        state: ClickButtons || noContext=true
+            
+        state: ClickButtons || noContext = true
+            q: * || fromState = "/Joke", onlyThisState = false
             a: Нажмите, пожалуйста, кнопку.
             go!: /Joke
-      
+        
         state: JokeNo
             a: Ну хорошо, расскажу, когда у тебя будет настроение. || htmlEnabled = false, html = "Ну хорошо, расскажу, когда у тебя будет настроение."
-            go!: /HowAreYou
+            go!: /Continue
         
         state: JokeYes
             a: Лови шутку: || htmlEnabled = false, html = "Лови шутку:"
             go!: /Joke/JokeYes/JokeText
 
             state: JokeText
-                a:  || htmlEnabled = false
-                random:
+                random: 
                     a: Пора бы перестать строить планы на прошлое.
                     a: Утро всегда доброе, а дальше сами.
                     a: Взятка унижает человека. Особенно маленькая.
@@ -61,7 +60,10 @@ theme: /
                     a: Некоторые весьма искренне думают, что они думают.
                     a: Скорость моего интернета научила меня терпению.
                 go!: /Joke
-            
+
+    state: Continue
+        a: Жду, пока ты со мной вновь заговоришь...
+        
     state: Bye
         intent!: /пока
         a: Пока, мой милый друг. Возвращайся!
