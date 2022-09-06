@@ -16,28 +16,54 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 12299078,
-    "path" : "/пока",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "пока"
-    } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
-    "priority" : 0
-  }, {
     "id" : 12299079,
-    "path" : "/привет",
+    "path" : "/Приветствие",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "привет"
+    }, {
+      "text" : "приветствую"
+    }, {
+      "text" : "добрый день"
+    }, {
+      "text" : "доброе утро"
+    }, {
+      "text" : "добрый вечер"
+    }, {
+      "text" : "здравствуйте"
+    }, {
+      "text" : "приветики"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 12299078,
+    "path" : "/Прощание",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    }, {
+      "text" : "прощай"
+    }, {
+      "text" : "до свидания"
+    }, {
+      "text" : "до новых встреч"
+    }, {
+      "text" : "до встречи"
+    }, {
+      "text" : "до завтра"
+    }, {
+      "text" : "гудбай"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
     "priority" : 0
   }, {
     "id" : 12313081,
@@ -50,46 +76,24 @@
     "priority" : 0
   }, {
     "id" : 12313080,
-    "path" : "/KnowledgeBase/FAQ.Пустой шаблон FAQ/Root/Как дела?",
+    "path" : "/KnowledgeBase/FAQ.Пустой шаблон FAQ/Root/Как дела",
     "answer" : "Все замечательно! ",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Как у тебя дела?"
+      "text" : "Как у тебя дела"
     }, {
-      "text" : "Как жизнь?"
+      "text" : "Как жизнь"
     }, {
-      "text" : "А как твои?"
+      "text" : "А как твои"
     }, {
-      "text" : "Как ты?"
+      "text" : "Как ты"
     }, {
-      "text" : "Как твои дела?"
+      "text" : "Как твои дела"
     }, {
       "text" : "Как дела?"
-    } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
-    "id" : 12313092,
-    "path" : "/KnowledgeBase/FAQ.Пустой шаблон FAQ/Root/Привет",
-    "answer" : "",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "Добрый день"
     }, {
-      "text" : "Добрый вечер"
-    }, {
-      "text" : "Приветики"
-    }, {
-      "text" : "Здравствуйте"
-    }, {
-      "text" : "Здравствуй"
-    }, {
-      "text" : "Привет"
+      "text" : "Как дела"
     } ],
     "classificationRules" : {
       "refs" : [ ]
