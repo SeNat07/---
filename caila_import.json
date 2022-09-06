@@ -39,6 +39,63 @@
       "refs" : [ ]
     },
     "priority" : 0
+  }, {
+    "id" : 12313081,
+    "path" : "/KnowledgeBase/FAQ.Пустой шаблон FAQ",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "id" : 12313080,
+    "path" : "/KnowledgeBase/FAQ.Пустой шаблон FAQ/Root/Как дела?",
+    "answer" : "Все замечательно! ",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Как у тебя дела?"
+    }, {
+      "text" : "Как жизнь?"
+    }, {
+      "text" : "А как твои?"
+    }, {
+      "text" : "Как ты?"
+    }, {
+      "text" : "Как твои дела?"
+    }, {
+      "text" : "Как дела?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 12313092,
+    "path" : "/KnowledgeBase/FAQ.Пустой шаблон FAQ/Root/Привет",
+    "answer" : "",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Добрый день"
+    }, {
+      "text" : "Добрый вечер"
+    }, {
+      "text" : "Приветики"
+    }, {
+      "text" : "Здравствуйте"
+    }, {
+      "text" : "Здравствуй"
+    }, {
+      "text" : "Привет"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
